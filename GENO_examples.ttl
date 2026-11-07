@@ -1,0 +1,173 @@
+
+@prefix ex: <https://w3id.org/geno/sparql-examples/> .  
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix spex: <https://purl.expasy.org/sparql-examples/ontology#> .
+
+ex:geno-01
+    a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+    rdfs:comment "Retrieve publications that are rooted in diary entries, based on genetic dossier relationships."@en ;
+    sh:prefixes _:roud_examples_prefixes ; # <!-- required for the import of the prefix declarations; blank node for modularity
+    sh:select """
+PREFIX geno: <https://w3id.org/geno#>
+PREFIX roud-oeuvres: <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?Publication ?title WHERE {
+  # A diary entry is part of a genetic dossier
+  ?diaryEntry a geno:DiaryEntry ;
+              geno:isMemberOfDossier ?GeneticDossier .
+  # That dossier results in a publication or a part of one
+  {
+    ?GeneticDossier geno:resultsInPublication ?Publication .
+  }
+  UNION
+  {
+    ?GeneticDossier geno:resultsInPublicationPart ?PubPart .
+    ?PubPart geno:isPartOfPublication ?Publication .
+  }
+  # Optionally get the publication title
+  OPTIONAL {
+    ?Publication roud-oeuvres:publicationHasTitle ?title .
+  }
+  # Optionally restrict to publications by Roud, if an author property is available
+  # OPTIONAL {
+  #   ?Publication roud-oeuvres:author ?author .
+  #   FILTER(CONTAINS(LCASE(STR(?author)), "roud"))
+  # }
+}
+""" ;
+    schema:keywords "diary, publication, genetic dossier" ;
+    schema:target <http://localhost:7200/sparql/> .
+    # spex:federatesWith <> .
+
+
+
+ex:geno-02
+    a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+    rdfs:comment "In which publications it is reused the article 'Cendre', originally published in the periodical Aujourd'hui in 1930?"@en ;
+    sh:prefixes _:roud_examples_prefixes ; # <!-- required for the import of the prefix declarations; blank node for modularity
+    sh:select """
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geno: <https://w3id.org/geno#>
+PREFIX roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#>
+select ?GeneticDossier ?PubTitle ?PubPartTitle ?PubDate
+where { 
+    <https://ark.dasch.swiss/ark:/72163/1/0112/w77KbuWKQUe8=8au2llnpQq> geno:publicationIsReusedInDossier ?GeneticDossier .
+    
+    # show the corresponding publication and publication part title
+    {?GeneticDossier geno:resultsInPublication ?Publication .}
+    UNION
+    {?GeneticDossier geno:resultsInPublicationPart ?PubPart .
+    ?PubPart roud-oeuvres:pubPartHasTitle ?PubPartTitle .
+    ?PubPart geno:isPartOfPublication ?Publication .}    
+    ?Publication roud-oeuvres:publicationHasTitle ?PubTitle .
+    ?Publication roud-oeuvres:publicationHasDate ?PubDate .
+}
+group by ?GeneticDossier ?PubTitle ?PubPartTitle ?PubDate
+""" ;
+    sh:select """
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geno: <https://w3id.org/geno#>
+PREFIX roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#>
+select ?Publication
+where { 
+    <https://ark.dasch.swiss/ark:/72163/1/0112/w77KbuWKQUe8=8au2llnpQq> geno:publicationIsReusedInDossier ?GeneticDossier .
+    ?GeneticDossier geno:resultsInPublicationPart ?Publication .
+}
+""" ;
+    schema:keywords "article, periodical, genetic dossier" ;
+    schema:target <http://localhost:7200/sparql/> .
+    # spex:federatesWith <> .
+
+
+
+
+ex:geno-03
+    a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+    rdfs:comment "To how many genetic dossiers a genetic witness can belong to?"@en ;
+    sh:prefixes _:roud_examples_prefixes ; # <!-- required for the import of the prefix declarations; blank node for modularity
+    sh:select """
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geno: <https://w3id.org/geno#>
+PREFIX roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#>
+select ?Witness (count(?GeneticDossier) as ?count)
+where { 
+	?Witness geno:isMemberOfDossier ?GeneticDossier .
+}
+group by ?Witness
+order by desc(?count)
+""" ;
+    schema:keywords "witness, dossier, genetic witness, genetic dossier" ;
+    schema:target <http://localhost:7200/sparql/> .
+    # spex:federatesWith <> .
+
+
+
+ex:geno-04
+    a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+    rdfs:comment "List everything that belongs to the dossier of Feuillets (1929)"@en ;
+    sh:prefixes _:roud_examples_prefixes ; # <!-- required for the import of the prefix declarations; blank node for modularity
+    sh:select """
+prefix geno: <https://w3id.org/geno#>
+select ?x where { 
+    BIND(<https://ark.dasch.swiss/ark:/72163/1/0112/a42Rpz7FRFinjNZ6ny4Rig2> as ?FeuilletsDossier)
+    {?x geno:isMemberOfDossier ?FeuilletsDossier . }
+    UNION
+    {?x geno:isReusedInDossier ?FeuilletsDossier . }   
+}
+""" ;
+    schema:keywords "everything, dossier, witness, genetic dossier" ;
+    schema:target <http://localhost:7200/sparql/> .
+    # spex:federatesWith <> .
+
+
+
+ex:geno-05
+    a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+    rdfs:comment "List all witnesses belonging to a pre-compositional phase in Roud's corpus"@en ;
+    sh:prefixes _:roud_examples_prefixes ; # <!-- required for the import of the prefix declarations; blank node for modularity
+    sh:select """
+prefix geno: <https://w3id.org/geno#>
+PREFIX roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#>
+select * where { 
+	?s a geno:PrecompositionalPhaseResource .
+	?s roud-oeuvres:manuscriptHasTitle ?title .
+	?s geno:hasGeneticStage ?stage .
+} 
+""" ;
+    schema:keywords "phase, pre-compositional, compositional, witness" ;
+    schema:target <http://localhost:7200/sparql/> .
+    # spex:federatesWith <> .
+
+
+
+
+ex:geno-06
+    a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+    rdfs:comment "How many genetic witnesses belong to a genetic dossier?"@en ;
+    sh:prefixes _:roud_examples_prefixes ; # <!-- required for the import of the prefix declarations; blank node for modularity
+    sh:select """
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geno: <https://w3id.org/geno#>
+PREFIX roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#>
+select ?GeneticDossier (count(?Witness) as ?count) ?PubTitle ?PubPartTitle ?PubDate
+where { 
+    ?Witness geno:isMemberOfDossier ?GeneticDossier .
+    
+    # show the corresponding publication and publication part title
+    {?GeneticDossier geno:resultsInPublication ?Publication .}
+    UNION
+    {?GeneticDossier geno:resultsInPublicationPart ?PubPart .
+    ?PubPart roud-oeuvres:pubPartHasTitle ?PubPartTitle .
+    ?PubPart geno:isPartOfPublication ?Publication .}    
+    ?Publication roud-oeuvres:publicationHasTitle ?PubTitle .
+    ?Publication roud-oeuvres:publicationHasDate ?PubDate .
+}
+group by ?GeneticDossier ?PubTitle ?PubPartTitle ?PubDate
+""" ;
+    schema:keywords "number, witness, dossier, genetic witness, genetic dossier" ;
+    schema:target <http://localhost:7200/sparql/> .
+    # spex:federatesWith <> .
+
+

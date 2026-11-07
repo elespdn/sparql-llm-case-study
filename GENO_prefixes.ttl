@@ -1,0 +1,43 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://example.org/ns#> .
+
+# Declaring prefix and namespaces using SHACL terms
+ex:prefixMappingSh
+    a sh:PrefixMapping ;
+    sh:prefix "sh" ;
+    sh:namespace <http://www.w3.org/ns/shacl#> .
+
+ex:prefixMappingRdfs
+    a sh:PrefixMapping ;
+    sh:prefix "rdfs" ;
+    sh:namespace <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:prefixMappingRdf
+    a sh:PrefixMapping ;
+    sh:prefix "rdf" ;
+    sh:namespace <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:prefixMappingGeno
+    a sh:PrefixMapping ;
+    sh:prefix "geno" ;
+    sh:namespace <https://w3id.org/geno#> .
+
+ex:prefixMappingRoudOeuvres
+    a sh:PrefixMapping ;
+    sh:prefix "roud-oeuvres" ;
+    sh:namespace <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#> .
+
+ex:prefixMappingCRMtex
+    a sh:PrefixMapping ;
+    sh:prefix "crmtex" ;
+    sh:namespace <http://www.cidoc-crm.org/extensions/crmtex/> .
+
+ex:prefixMappingFaBiO
+    a sh:PrefixMapping ;
+    sh:prefix "fabio" ;
+    sh:namespace <http://purl.org/spar/fabio/> .
+
+ex:prefixMappingDCTerms
+    a sh:PrefixMapping ;
+    sh:prefix "dcterms" ;
+    sh:namespace <http://purl.org/dc/terms/> .

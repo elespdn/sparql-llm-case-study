@@ -1,0 +1,2375 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix : <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void_ext: <http://ldf.fi/void-ext#> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://localhost:7200/repositories/geno> a :Service;
+  :defaultDataset <http://localhost:7200/repositories/geno#sparql-default-dataset>;
+  :endpoint <http://localhost:7200/repositories/geno>;
+  :resultFormat formats:SPARQL_Results_CSV, formats:SPARQL_Results_JSON, formats:N-Triples,
+    formats:RDF_XML, formats:SPARQL_Results_TSV, formats:Turtle, formats:SPARQL_Results_XML;
+  :supportedLanguage :SPARQL11Query;
+  :feature :UnionDefaultGraph, :BasicFederatedQuery;
+  :availableGraphs _:a155d9bafd9c42388199469ab29737ac158 .
+
+<http://localhost:7200/repositories/geno#sparql-default-dataset> a :Dataset;
+  :defaultGraph <http://localhost:7200/repositories/geno/.well-known/void#sparql-default-graph>;
+  :namedGraph <http://example.com/geno_data-Roud>, <https://w3id.org/geno#>, <http://example.com/geno_examples>,
+    <http://example.com/geno_prefixes> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#sparql-default-graph> a
+    :Graph;
+  void:triples "6038"^^xsd:long;
+  void:distinctObjects "2196"^^xsd:long;
+  void_ext:distinctLiterals "1363"^^xsd:long;
+  void_ext:distinctIRIReferenceObjects "833"^^xsd:long;
+  void:distinctSubjects "1302"^^xsd:long;
+  void_ext:distinctIRIReferenceSubjects "1195"^^xsd:long;
+  void_ext:distinctBlankNodeSubjects "107"^^xsd:long .
+
+_:a155d9bafd9c42388199469ab29737ac158 :namedGraph <http://example.com/geno_data-Roud>,
+    <https://w3id.org/geno#>, <http://example.com/geno_examples>, <http://example.com/geno_prefixes> .
+
+<http://example.com/geno_data-Roud> a :NamedGraph;
+  :name <http://example.com/geno_data-Roud>;
+  :graph <http://localhost:7200/repositories/geno/.well-known/void#_graph_geno_data-Roud!20bf68c8>;
+  void:subset <http://localhost:7200/repositories/geno/.well-known/void#linkset_dfba08cc>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_e873aae2>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_4045ebd0>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_10b7917a>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_d283e901>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_f4f63629>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_55e9462f>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_b9837033>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_3699fad7>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_270a6cee>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_586ce93f>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_450cb33e>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_0262f307>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_c0efb699>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_b7fa7b5f>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_9e16eb5a>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_46bd7652>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_2bf43d56>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_3794b3ee>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_50a26235>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_d96eddb7>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_2d0ffde0>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_09fa662a>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_9b4b85d4>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_7a30505a>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_93ba3bca>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_a7f2489c>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_dc114029>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_6e019fb4>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_b9dd0ca3>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_5cfc5d56>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_8246874c>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_bc3d5566>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_e1f5a073>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_e59ff360>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_88d4f66e>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_ff19c26b>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_45956c0f> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#_graph_geno_data-Roud!20bf68c8>
+  a :Graph;
+  void:triples "5588"^^xsd:long;
+  void:classes "13"^^xsd:long;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3adfae5d!Expression>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d9fe8676!Book>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b739f44d!BookSection>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8dc3c6bf!Manuscript>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c77ca30b!Periodical>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c35622d9!PeriodicalArticle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!88ab1282!PubPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b1f47595!Avant-textualWitness>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!77c03f4c!Publication>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5df79dec!PublicationPart>;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c74e2b73!type>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2e9df2f7!bookSectionHasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b4ec514a!bookSectionIsPartOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cce45f0c!hasGeneticStage>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!57870ffd!hasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dcf5d3d8!isPublishedInPeriodical>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!269e34e8!manuscriptHasDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d4783a96!manuscriptHasDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8648dd59!manuscriptHasEditorialSet>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2589bee1!manuscriptHasEstablishedDateAddition>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e85f9246!manuscriptHasEstablishedDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bb5d8245!manuscriptHasEstablishedDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!49952aac!manuscriptHasShelfmark>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ed9a3d31!manuscriptHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bac8344d!manuscriptIsInArchive>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8426d7b3!msIsRewrittenInMsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!02559317!msPartHasNumber>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f827a764!msPartHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8328c2d0!msPartIsPartOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cfa3b82b!periodicalHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!48a4b68c!pubPartHasNumber>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!decdf9b7!pubPartHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6cca4972!publicationHasDate>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!480602b9!publicationHasIllustration>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1b3fc5af!publicationHasPhoto>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ca4668c7!publicationHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!952df7d3!hasGeneticStage>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7f44cfae!isBefore>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8410fd87!isMemberOfDossier>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!fc24c9be!isPartOfPublication>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!85b7f6a8!publicationIsReusedInDossier>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3b76bf31!publicationPartIsReusedInDossier>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!59149229!resultsInPublication>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!032ea7a8!resultsInPublicationPart>;
+  void:distinctObjects "1235"^^xsd:long;
+  void_ext:distinctLiterals "1235"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3adfae5d!Expression>
+  a void:Dataset;
+  void:class <http://purl.org/spar/fabio/Expression>;
+  void:entities "124"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6ccf0ddc!-Expression-bookSectionHasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6cc60a4a!-Expression-bookSectionIsPartOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a3c67971!-Expression-hasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a6083712!-Expression-isPublishedInPeriodical>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1c76e996!-Expression-publicationHasDate>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!48f1ea66!-Expression-publicationHasIllustration>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!03271207!-Expression-publicationHasPhoto>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8d6d9341!-Expression-publicationHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!629c6707!-Expression-publicationIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6ccf0ddc!-Expression-bookSectionHasPublisher>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionHasPublisher>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e7369464!-bookSectionHasPublisher-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e7369464!-bookSectionHasPublisher-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6cc60a4a!-Expression-bookSectionIsPartOf>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionIsPartOf>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!01ac627c!-bookSectionIsPartOf-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!01ac627c!-bookSectionIsPartOf-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a3c67971!-Expression-hasPublisher>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#hasPublisher>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5da392bd!-hasPublisher-string>;
+  void:triples "15"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5da392bd!-hasPublisher-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a6083712!-Expression-isPublishedInPeriodical>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#isPublishedInPeriodical>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!83e40d89!-Expression-isPublishedInPeriodical-Periodical>;
+  void:triples "105"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!83e40d89!-Expression-isPublishedInPeriodical-Periodical>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Periodical>;
+  void:triples "105"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_dfba08cc> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#isPublishedInPeriodical>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3adfae5d!Expression>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c77ca30b!Periodical> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1c76e996!-Expression-publicationHasDate>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasDate>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8940cf06!-publicationHasDate-string>;
+  void:triples "126"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8940cf06!-publicationHasDate-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!48f1ea66!-Expression-publicationHasIllustration>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasIllustration>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b1d6144f!-publicationHasIllustration-string>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b1d6144f!-publicationHasIllustration-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!03271207!-Expression-publicationHasPhoto>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasPhoto>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bd55fcab!-publicationHasPhoto-string>;
+  void:triples "14"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bd55fcab!-publicationHasPhoto-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8d6d9341!-Expression-publicationHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bc281aa3!-publicationHasTitle-string>;
+  void:triples "124"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bc281aa3!-publicationHasTitle-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!629c6707!-Expression-publicationIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!48e4efa7!-Expression-publicationIsReusedInDossier-GeneticDossier>;
+  void:triples "134"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!48e4efa7!-Expression-publicationIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "134"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_e873aae2> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3adfae5d!Expression>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d9fe8676!Book>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Book>;
+  void:entities "15"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!9064a933!-Book-hasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!06c1f48f!-Book-publicationHasDate>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4aaccd61!-Book-publicationHasIllustration>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ae654ece!-Book-publicationHasPhoto>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5b48c5f8!-Book-publicationHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4c3632a5!-Book-publicationIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!9064a933!-Book-hasPublisher>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#hasPublisher>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5da392bd!-hasPublisher-string>;
+  void:triples "15"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!06c1f48f!-Book-publicationHasDate>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasDate>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8940cf06!-publicationHasDate-string>;
+  void:triples "15"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4aaccd61!-Book-publicationHasIllustration>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasIllustration>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b1d6144f!-publicationHasIllustration-string>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ae654ece!-Book-publicationHasPhoto>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasPhoto>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bd55fcab!-publicationHasPhoto-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5b48c5f8!-Book-publicationHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bc281aa3!-publicationHasTitle-string>;
+  void:triples "15"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4c3632a5!-Book-publicationIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f28b0bd1!-Book-publicationIsReusedInDossier-GeneticDossier>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f28b0bd1!-Book-publicationIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_4045ebd0> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d9fe8676!Book>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b739f44d!BookSection>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#BookSection>;
+  void:entities "5"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cdf9fa6d!-BookSection-bookSectionHasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!742b67f2!-BookSection-bookSectionIsPartOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!03e04070!-BookSection-publicationHasDate>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d8aa97da!-BookSection-publicationHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dd344547!-BookSection-publicationIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cdf9fa6d!-BookSection-bookSectionHasPublisher>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionHasPublisher>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e7369464!-bookSectionHasPublisher-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!742b67f2!-BookSection-bookSectionIsPartOf>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionIsPartOf>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!01ac627c!-bookSectionIsPartOf-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!03e04070!-BookSection-publicationHasDate>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasDate>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8940cf06!-publicationHasDate-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d8aa97da!-BookSection-publicationHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bc281aa3!-publicationHasTitle-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dd344547!-BookSection-publicationIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f9fe9717!-BookSection-publicationIsReusedInDossier-GeneticDossier>;
+  void:triples "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f9fe9717!-BookSection-publicationIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_10b7917a> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b739f44d!BookSection>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8dc3c6bf!Manuscript>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Manuscript>;
+  void:entities "244"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!fb418cc1!-Manuscript-hasGeneticStage>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bb70cae3!-Manuscript-manuscriptHasDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1a32843e!-Manuscript-manuscriptHasDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!97dbece4!-Manuscript-manuscriptHasEditorialSet>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f8d18267!-Manuscript-manuscriptHasEstablishedDateAddition>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!41f58103!-Manuscript-manuscriptHasEstablishedDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f9b71c8b!-Manuscript-manuscriptHasEstablishedDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!9d81e959!-Manuscript-manuscriptHasShelfmark>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3e645cba!-Manuscript-manuscriptHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!378c4505!-Manuscript-manuscriptIsInArchive>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4d41f504!-Manuscript-msIsRewrittenInMsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6d1a8c04!-Manuscript-hasGeneticStage>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8b7b2d07!-Manuscript-isMemberOfDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!fb418cc1!-Manuscript-hasGeneticStage>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#hasGeneticStage>;
+  void:triples "24"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bb70cae3!-Manuscript-manuscriptHasDateComputable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateComputable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3a3b518c!-manuscriptHasDateComputable-string>;
+  void:triples "46"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3a3b518c!-manuscriptHasDateComputable-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1a32843e!-Manuscript-manuscriptHasDateReadable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateReadable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!797c22d9!-manuscriptHasDateReadable-string>;
+  void:triples "52"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!797c22d9!-manuscriptHasDateReadable-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!97dbece4!-Manuscript-manuscriptHasEditorialSet>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEditorialSet>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ccf4cd77!-manuscriptHasEditorialSet-string>;
+  void:triples "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ccf4cd77!-manuscriptHasEditorialSet-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f8d18267!-Manuscript-manuscriptHasEstablishedDateAddition>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateAddition>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6f3f8665!-manuscriptHasEstablishedDateAddition-string>;
+  void:triples "201"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6f3f8665!-manuscriptHasEstablishedDateAddition-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!41f58103!-Manuscript-manuscriptHasEstablishedDateComputable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateComputable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cb2884cb!-manuscriptHasEstablishedDateComputable-string>;
+  void:triples "213"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cb2884cb!-manuscriptHasEstablishedDateComputable-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f9b71c8b!-Manuscript-manuscriptHasEstablishedDateReadable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateReadable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dab619c1!-manuscriptHasEstablishedDateReadable-string>;
+  void:triples "207"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dab619c1!-manuscriptHasEstablishedDateReadable-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!9d81e959!-Manuscript-manuscriptHasShelfmark>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasShelfmark>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7e6ad435!-manuscriptHasShelfmark-string>;
+  void:triples "244"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7e6ad435!-manuscriptHasShelfmark-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3e645cba!-Manuscript-manuscriptHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e77fe64e!-manuscriptHasTitle-string>;
+  void:triples "244"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e77fe64e!-manuscriptHasTitle-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!378c4505!-Manuscript-manuscriptIsInArchive>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptIsInArchive>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8ebd8464!-manuscriptIsInArchive-string>;
+  void:triples "244"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8ebd8464!-manuscriptIsInArchive-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4d41f504!-Manuscript-msIsRewrittenInMsPart>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msIsRewrittenInMsPart>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bf3b2075!-Manuscript-msIsRewrittenInMsPart-MsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cf82fb85!-Manuscript-msIsRewrittenInMsPart-DiaryEntry>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bf3b2075!-Manuscript-msIsRewrittenInMsPart-MsPart>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#MsPart>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cf82fb85!-Manuscript-msIsRewrittenInMsPart-DiaryEntry>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#DiaryEntry>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_d283e901> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msIsRewrittenInMsPart>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8dc3c6bf!Manuscript>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_f4f63629> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msIsRewrittenInMsPart>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8dc3c6bf!Manuscript>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6d1a8c04!-Manuscript-hasGeneticStage>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#hasGeneticStage>;
+  void:triples "171"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8b7b2d07!-Manuscript-isMemberOfDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isMemberOfDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7c3d0bde!-Manuscript-isMemberOfDossier-GeneticDossier>;
+  void:triples "220"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7c3d0bde!-Manuscript-isMemberOfDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "220"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_55e9462f> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isMemberOfDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8dc3c6bf!Manuscript>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#MsPart>;
+  void:entities "237"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!526cd90d!-MsPart-msPartHasNumber>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c29e0fbc!-MsPart-msPartHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!11bef106!-MsPart-msPartIsPartOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!402575ae!-MsPart-isBefore>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!70f2b604!-MsPart-isMemberOfDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!526cd90d!-MsPart-msPartHasNumber>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartHasNumber>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!144e6cdf!-msPartHasNumber-string>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!144e6cdf!-msPartHasNumber-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c29e0fbc!-MsPart-msPartHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!27fde91f!-msPartHasTitle-string>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!27fde91f!-msPartHasTitle-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!11bef106!-MsPart-msPartIsPartOf>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartIsPartOf>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bb667c38!-MsPart-msPartIsPartOf-Manuscript>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bb667c38!-MsPart-msPartIsPartOf-Manuscript>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Manuscript>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_b9837033> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartIsPartOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8dc3c6bf!Manuscript> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!402575ae!-MsPart-isBefore>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isBefore>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!50b8e482!-MsPart-isBefore-MsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4fbb824b!-MsPart-isBefore-DiaryEntry>;
+  void:triples "48"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!50b8e482!-MsPart-isBefore-MsPart>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#MsPart>;
+  void:triples "48"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!4fbb824b!-MsPart-isBefore-DiaryEntry>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#DiaryEntry>;
+  void:triples "48"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_3699fad7> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isBefore>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_270a6cee> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isBefore>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!70f2b604!-MsPart-isMemberOfDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isMemberOfDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!93f18b64!-MsPart-isMemberOfDossier-GeneticDossier>;
+  void:triples "229"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!93f18b64!-MsPart-isMemberOfDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "229"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_586ce93f> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isMemberOfDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c77ca30b!Periodical>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Periodical>;
+  void:entities "37"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!008da912!-Periodical-periodicalHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!96a7983e!-Periodical-publicationIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!008da912!-Periodical-periodicalHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#periodicalHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!014e0c09!-periodicalHasTitle-string>;
+  void:triples "37"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!014e0c09!-periodicalHasTitle-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!96a7983e!-Periodical-publicationIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0b32ec33!-Periodical-publicationIsReusedInDossier-GeneticDossier>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0b32ec33!-Periodical-publicationIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_450cb33e> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c77ca30b!Periodical>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c35622d9!PeriodicalArticle>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#PeriodicalArticle>;
+  void:entities "104"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!32288c05!-PeriodicalArticle-isPublishedInPeriodical>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f08fa839!-PeriodicalArticle-publicationHasDate>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a9fbae4e!-PeriodicalArticle-publicationHasPhoto>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!20d75fd8!-PeriodicalArticle-publicationHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!523c01d2!-PeriodicalArticle-publicationIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!32288c05!-PeriodicalArticle-isPublishedInPeriodical>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#isPublishedInPeriodical>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ef7ecaae!-PeriodicalArticle-isPublishedInPeriodical-Periodical>;
+  void:triples "105"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ef7ecaae!-PeriodicalArticle-isPublishedInPeriodical-Periodical>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Periodical>;
+  void:triples "105"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_0262f307> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#isPublishedInPeriodical>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c35622d9!PeriodicalArticle>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c77ca30b!Periodical> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f08fa839!-PeriodicalArticle-publicationHasDate>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasDate>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8940cf06!-publicationHasDate-string>;
+  void:triples "106"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a9fbae4e!-PeriodicalArticle-publicationHasPhoto>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasPhoto>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bd55fcab!-publicationHasPhoto-string>;
+  void:triples "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!20d75fd8!-PeriodicalArticle-publicationHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bc281aa3!-publicationHasTitle-string>;
+  void:triples "104"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!523c01d2!-PeriodicalArticle-publicationIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!17053c73!-PeriodicalArticle-publicationIsReusedInDossier-GeneticDossier>;
+  void:triples "127"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!17053c73!-PeriodicalArticle-publicationIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "127"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_c0efb699> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c35622d9!PeriodicalArticle>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!88ab1282!PubPart>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#PubPart>;
+  void:entities "95"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3d988a2d!-PubPart-pubPartHasNumber>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!49043736!-PubPart-pubPartHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!791a4967!-PubPart-isPartOfPublication>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2bff53b1!-PubPart-publicationPartIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3d988a2d!-PubPart-pubPartHasNumber>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#pubPartHasNumber>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!753c5cea!-pubPartHasNumber-string>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!753c5cea!-pubPartHasNumber-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!49043736!-PubPart-pubPartHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#pubPartHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e13935c0!-pubPartHasTitle-string>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e13935c0!-pubPartHasTitle-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!791a4967!-PubPart-isPartOfPublication>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isPartOfPublication>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d2d5e0cc!-PubPart-isPartOfPublication-Expression>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2feaa67c!-PubPart-isPartOfPublication-Book>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!96ba45cc!-PubPart-isPartOfPublication-Publication>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d2d5e0cc!-PubPart-isPartOfPublication-Expression>
+  a void:Dataset;
+  void:class <http://purl.org/spar/fabio/Expression>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2feaa67c!-PubPart-isPartOfPublication-Book>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Book>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!96ba45cc!-PubPart-isPartOfPublication-Publication>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#Publication>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_b7fa7b5f> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isPartOfPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!88ab1282!PubPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3adfae5d!Expression> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_9e16eb5a> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isPartOfPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!88ab1282!PubPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d9fe8676!Book> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_46bd7652> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isPartOfPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!88ab1282!PubPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!77c03f4c!Publication> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2bff53b1!-PubPart-publicationPartIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationPartIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!189d7583!-PubPart-publicationPartIsReusedInDossier-GeneticDossier>;
+  void:triples "22"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!189d7583!-PubPart-publicationPartIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "22"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_2bf43d56> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationPartIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!88ab1282!PubPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b1f47595!Avant-textualWitness>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#Avant-textualWitness>;
+  void:entities "171"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!01dff6c1!-Avant-textualWitness-hasGeneticStage>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a97b1cc0!-Avant-textualWitness-manuscriptHasDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5812db86!-Avant-textualWitness-manuscriptHasDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a3818ef9!-Avant-textualWitness-manuscriptHasEstablishedDateAddition>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6c975081!-Avant-textualWitness-manuscriptHasEstablishedDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ca133752!-Avant-textualWitness-manuscriptHasEstablishedDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!98467ccb!-Avant-textualWitness-manuscriptHasShelfmark>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6a78aed5!-Avant-textualWitness-manuscriptHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c4c61c41!-Avant-textualWitness-manuscriptIsInArchive>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!07d76796!-Avant-textualWitness-hasGeneticStage>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5bdbedef!-Avant-textualWitness-isMemberOfDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!01dff6c1!-Avant-textualWitness-hasGeneticStage>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#hasGeneticStage>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a97b1cc0!-Avant-textualWitness-manuscriptHasDateComputable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateComputable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3a3b518c!-manuscriptHasDateComputable-string>;
+  void:triples "14"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5812db86!-Avant-textualWitness-manuscriptHasDateReadable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateReadable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!797c22d9!-manuscriptHasDateReadable-string>;
+  void:triples "14"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a3818ef9!-Avant-textualWitness-manuscriptHasEstablishedDateAddition>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateAddition>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6f3f8665!-manuscriptHasEstablishedDateAddition-string>;
+  void:triples "151"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6c975081!-Avant-textualWitness-manuscriptHasEstablishedDateComputable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateComputable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cb2884cb!-manuscriptHasEstablishedDateComputable-string>;
+  void:triples "153"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ca133752!-Avant-textualWitness-manuscriptHasEstablishedDateReadable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateReadable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dab619c1!-manuscriptHasEstablishedDateReadable-string>;
+  void:triples "150"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!98467ccb!-Avant-textualWitness-manuscriptHasShelfmark>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasShelfmark>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7e6ad435!-manuscriptHasShelfmark-string>;
+  void:triples "171"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6a78aed5!-Avant-textualWitness-manuscriptHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e77fe64e!-manuscriptHasTitle-string>;
+  void:triples "171"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c4c61c41!-Avant-textualWitness-manuscriptIsInArchive>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptIsInArchive>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8ebd8464!-manuscriptIsInArchive-string>;
+  void:triples "171"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!07d76796!-Avant-textualWitness-hasGeneticStage>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#hasGeneticStage>;
+  void:triples "171"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5bdbedef!-Avant-textualWitness-isMemberOfDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isMemberOfDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0f9b2058!-Avant-textualWitness-isMemberOfDossier-GeneticDossier>;
+  void:triples "189"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0f9b2058!-Avant-textualWitness-isMemberOfDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "189"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_3794b3ee> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isMemberOfDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b1f47595!Avant-textualWitness>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#DiaryEntry>;
+  void:entities "245"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!64dad4c7!-DiaryEntry-manuscriptHasDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!209d47ac!-DiaryEntry-manuscriptHasDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7a9f0882!-DiaryEntry-manuscriptHasEditorialSet>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2fa3a208!-DiaryEntry-manuscriptHasEstablishedDateAddition>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!82340603!-DiaryEntry-manuscriptHasEstablishedDateComputable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!86e945bf!-DiaryEntry-manuscriptHasEstablishedDateReadable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7a36e796!-DiaryEntry-manuscriptHasShelfmark>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!342d1766!-DiaryEntry-manuscriptHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b3c8dffd!-DiaryEntry-manuscriptIsInArchive>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d6edf24f!-DiaryEntry-msIsRewrittenInMsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b58b59be!-DiaryEntry-msPartHasNumber>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!087adb94!-DiaryEntry-msPartHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!033810cd!-DiaryEntry-msPartIsPartOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c59eab66!-DiaryEntry-isBefore>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ce4c0ef0!-DiaryEntry-isMemberOfDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!64dad4c7!-DiaryEntry-manuscriptHasDateComputable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateComputable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3a3b518c!-manuscriptHasDateComputable-string>;
+  void:triples "4"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!209d47ac!-DiaryEntry-manuscriptHasDateReadable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateReadable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!797c22d9!-manuscriptHasDateReadable-string>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7a9f0882!-DiaryEntry-manuscriptHasEditorialSet>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEditorialSet>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ccf4cd77!-manuscriptHasEditorialSet-string>;
+  void:triples "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2fa3a208!-DiaryEntry-manuscriptHasEstablishedDateAddition>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateAddition>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6f3f8665!-manuscriptHasEstablishedDateAddition-string>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!82340603!-DiaryEntry-manuscriptHasEstablishedDateComputable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateComputable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cb2884cb!-manuscriptHasEstablishedDateComputable-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!86e945bf!-DiaryEntry-manuscriptHasEstablishedDateReadable>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateReadable>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dab619c1!-manuscriptHasEstablishedDateReadable-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7a36e796!-DiaryEntry-manuscriptHasShelfmark>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasShelfmark>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7e6ad435!-manuscriptHasShelfmark-string>;
+  void:triples "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!342d1766!-DiaryEntry-manuscriptHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e77fe64e!-manuscriptHasTitle-string>;
+  void:triples "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b3c8dffd!-DiaryEntry-manuscriptIsInArchive>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptIsInArchive>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8ebd8464!-manuscriptIsInArchive-string>;
+  void:triples "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d6edf24f!-DiaryEntry-msIsRewrittenInMsPart>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msIsRewrittenInMsPart>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e0ea33b3!-DiaryEntry-msIsRewrittenInMsPart-MsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7bf4f2b1!-DiaryEntry-msIsRewrittenInMsPart-DiaryEntry>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e0ea33b3!-DiaryEntry-msIsRewrittenInMsPart-MsPart>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#MsPart>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7bf4f2b1!-DiaryEntry-msIsRewrittenInMsPart-DiaryEntry>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#DiaryEntry>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_50a26235> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msIsRewrittenInMsPart>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_d96eddb7> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msIsRewrittenInMsPart>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b58b59be!-DiaryEntry-msPartHasNumber>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartHasNumber>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!144e6cdf!-msPartHasNumber-string>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!087adb94!-DiaryEntry-msPartHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!27fde91f!-msPartHasTitle-string>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!033810cd!-DiaryEntry-msPartIsPartOf>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartIsPartOf>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!167ff842!-DiaryEntry-msPartIsPartOf-Manuscript>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!167ff842!-DiaryEntry-msPartIsPartOf-Manuscript>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Manuscript>;
+  void:triples "237"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_2d0ffde0> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartIsPartOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8dc3c6bf!Manuscript> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c59eab66!-DiaryEntry-isBefore>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isBefore>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c06fbe19!-DiaryEntry-isBefore-MsPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!990b1a95!-DiaryEntry-isBefore-DiaryEntry>;
+  void:triples "48"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c06fbe19!-DiaryEntry-isBefore-MsPart>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#MsPart>;
+  void:triples "48"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!990b1a95!-DiaryEntry-isBefore-DiaryEntry>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#DiaryEntry>;
+  void:triples "48"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_09fa662a> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isBefore>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5010f57e!MsPart> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_9b4b85d4> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isBefore>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ce4c0ef0!-DiaryEntry-isMemberOfDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isMemberOfDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0bbb54c4!-DiaryEntry-isMemberOfDossier-GeneticDossier>;
+  void:triples "236"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0bbb54c4!-DiaryEntry-isMemberOfDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "236"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_7a30505a> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isMemberOfDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!015c97e6!DiaryEntry>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:entities "175"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!39507c6c!-GeneticDossier-resultsInPublication>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0f2d9e55!-GeneticDossier-resultsInPublicationPart> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!39507c6c!-GeneticDossier-resultsInPublication>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#resultsInPublication>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a0e8da58!-GeneticDossier-resultsInPublication-Expression>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3f58e3c1!-GeneticDossier-resultsInPublication-Book>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b381aa17!-GeneticDossier-resultsInPublication-BookSection>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c2f62f12!-GeneticDossier-resultsInPublication-PeriodicalArticle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b4036fcd!-GeneticDossier-resultsInPublication-Publication>;
+  void:triples "81"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a0e8da58!-GeneticDossier-resultsInPublication-Expression>
+  a void:Dataset;
+  void:class <http://purl.org/spar/fabio/Expression>;
+  void:triples "81"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3f58e3c1!-GeneticDossier-resultsInPublication-Book>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Book>;
+  void:triples "12"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b381aa17!-GeneticDossier-resultsInPublication-BookSection>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#BookSection>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c2f62f12!-GeneticDossier-resultsInPublication-PeriodicalArticle>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#PeriodicalArticle>;
+  void:triples "64"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b4036fcd!-GeneticDossier-resultsInPublication-Publication>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#Publication>;
+  void:triples "81"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_93ba3bca> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#resultsInPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3adfae5d!Expression> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_a7f2489c> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#resultsInPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d9fe8676!Book> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_dc114029> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#resultsInPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b739f44d!BookSection> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_6e019fb4> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#resultsInPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c35622d9!PeriodicalArticle> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_b9dd0ca3> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#resultsInPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!77c03f4c!Publication> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0f2d9e55!-GeneticDossier-resultsInPublicationPart>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#resultsInPublicationPart>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6cb76279!-GeneticDossier-resultsInPublicationPart-PubPart>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!47071948!-GeneticDossier-resultsInPublicationPart-PublicationPart>;
+  void:triples "94"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6cb76279!-GeneticDossier-resultsInPublicationPart-PubPart>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#PubPart>;
+  void:triples "94"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!47071948!-GeneticDossier-resultsInPublicationPart-PublicationPart>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#PublicationPart>;
+  void:triples "94"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_5cfc5d56> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#resultsInPublicationPart>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!88ab1282!PubPart> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_8246874c> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#resultsInPublicationPart>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5df79dec!PublicationPart> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!77c03f4c!Publication>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#Publication>;
+  void:entities "124"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0c61cb09!-Publication-bookSectionHasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!329d9f95!-Publication-bookSectionIsPartOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dbdbd994!-Publication-hasPublisher>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2d1c8afd!-Publication-isPublishedInPeriodical>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3a141ab3!-Publication-publicationHasDate>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2ca3eabb!-Publication-publicationHasIllustration>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f86e2754!-Publication-publicationHasPhoto>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ed242c4d!-Publication-publicationHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!76d2f529!-Publication-publicationIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!0c61cb09!-Publication-bookSectionHasPublisher>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionHasPublisher>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e7369464!-bookSectionHasPublisher-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!329d9f95!-Publication-bookSectionIsPartOf>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionIsPartOf>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!01ac627c!-bookSectionIsPartOf-string>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dbdbd994!-Publication-hasPublisher>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#hasPublisher>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5da392bd!-hasPublisher-string>;
+  void:triples "15"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2d1c8afd!-Publication-isPublishedInPeriodical>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#isPublishedInPeriodical>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dcbe6819!-Publication-isPublishedInPeriodical-Periodical>;
+  void:triples "105"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dcbe6819!-Publication-isPublishedInPeriodical-Periodical>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Periodical>;
+  void:triples "105"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_bc3d5566> a void:Linkset;
+  void:linkPredicate <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#isPublishedInPeriodical>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!77c03f4c!Publication>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c77ca30b!Periodical> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3a141ab3!-Publication-publicationHasDate>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasDate>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8940cf06!-publicationHasDate-string>;
+  void:triples "126"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2ca3eabb!-Publication-publicationHasIllustration>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasIllustration>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b1d6144f!-publicationHasIllustration-string>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f86e2754!-Publication-publicationHasPhoto>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasPhoto>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bd55fcab!-publicationHasPhoto-string>;
+  void:triples "14"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ed242c4d!-Publication-publicationHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bc281aa3!-publicationHasTitle-string>;
+  void:triples "124"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!76d2f529!-Publication-publicationIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2cfee19a!-Publication-publicationIsReusedInDossier-GeneticDossier>;
+  void:triples "134"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2cfee19a!-Publication-publicationIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "134"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_e1f5a073> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!77c03f4c!Publication>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5df79dec!PublicationPart>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#PublicationPart>;
+  void:entities "95"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1d70dab1!-PublicationPart-pubPartHasNumber>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f8477288!-PublicationPart-pubPartHasTitle>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2129209b!-PublicationPart-isPartOfPublication>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!052c57f5!-PublicationPart-publicationPartIsReusedInDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1d70dab1!-PublicationPart-pubPartHasNumber>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#pubPartHasNumber>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!753c5cea!-pubPartHasNumber-string>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f8477288!-PublicationPart-pubPartHasTitle>
+  a void:Dataset;
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#pubPartHasTitle>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e13935c0!-pubPartHasTitle-string>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2129209b!-PublicationPart-isPartOfPublication>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#isPartOfPublication>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5c0b9f21!-PublicationPart-isPartOfPublication-Expression>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a05696b6!-PublicationPart-isPartOfPublication-Book>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2d4e9c6a!-PublicationPart-isPartOfPublication-Publication>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5c0b9f21!-PublicationPart-isPartOfPublication-Expression>
+  a void:Dataset;
+  void:class <http://purl.org/spar/fabio/Expression>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!a05696b6!-PublicationPart-isPartOfPublication-Book>
+  a void:Dataset;
+  void:class <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#Book>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2d4e9c6a!-PublicationPart-isPartOfPublication-Publication>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#Publication>;
+  void:triples "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_e59ff360> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isPartOfPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5df79dec!PublicationPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3adfae5d!Expression> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_88d4f66e> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isPartOfPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5df79dec!PublicationPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d9fe8676!Book> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_ff19c26b> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#isPartOfPublication>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5df79dec!PublicationPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!77c03f4c!Publication> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!052c57f5!-PublicationPart-publicationPartIsReusedInDossier>
+  a void:Dataset;
+  void:property <https://w3id.org/geno#publicationPartIsReusedInDossier>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3de89556!-PublicationPart-publicationPartIsReusedInDossier-GeneticDossier>;
+  void:triples "22"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3de89556!-PublicationPart-publicationPartIsReusedInDossier-GeneticDossier>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticDossier>;
+  void:triples "22"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_45956c0f> a void:Linkset;
+  void:linkPredicate <https://w3id.org/geno#publicationPartIsReusedInDossier>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!5df79dec!PublicationPart>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cde86a45!GeneticDossier> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!c74e2b73!type>
+  void:property rdf:type;
+  void:triples "1671"^^xsd:long;
+  void:distinctSubjects "912"^^xsd:long;
+  void:distinctObjects "13"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2e9df2f7!bookSectionHasPublisher>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionHasPublisher>;
+  void:triples "5"^^xsd:long;
+  void:distinctSubjects "5"^^xsd:long;
+  void:distinctObjects "4"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!b4ec514a!bookSectionIsPartOf>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#bookSectionIsPartOf>;
+  void:triples "5"^^xsd:long;
+  void:distinctSubjects "5"^^xsd:long;
+  void:distinctObjects "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cce45f0c!hasGeneticStage>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#hasGeneticStage>;
+  void:triples "24"^^xsd:long;
+  void:distinctSubjects "24"^^xsd:long;
+  void:distinctObjects "7"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!57870ffd!hasPublisher>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#hasPublisher>;
+  void:triples "15"^^xsd:long;
+  void:distinctSubjects "15"^^xsd:long;
+  void:distinctObjects "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!dcf5d3d8!isPublishedInPeriodical>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#isPublishedInPeriodical>;
+  void:triples "105"^^xsd:long;
+  void:distinctSubjects "104"^^xsd:long;
+  void:distinctObjects "37"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!269e34e8!manuscriptHasDateComputable>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateComputable>;
+  void:triples "46"^^xsd:long;
+  void:distinctSubjects "46"^^xsd:long;
+  void:distinctObjects "43"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!d4783a96!manuscriptHasDateReadable>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasDateReadable>;
+  void:triples "52"^^xsd:long;
+  void:distinctSubjects "52"^^xsd:long;
+  void:distinctObjects "49"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8648dd59!manuscriptHasEditorialSet>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEditorialSet>;
+  void:triples "9"^^xsd:long;
+  void:distinctSubjects "9"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!2589bee1!manuscriptHasEstablishedDateAddition>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateAddition>;
+  void:triples "201"^^xsd:long;
+  void:distinctSubjects "201"^^xsd:long;
+  void:distinctObjects "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!e85f9246!manuscriptHasEstablishedDateComputable>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateComputable>;
+  void:triples "213"^^xsd:long;
+  void:distinctSubjects "209"^^xsd:long;
+  void:distinctObjects "99"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bb5d8245!manuscriptHasEstablishedDateReadable>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasEstablishedDateReadable>;
+  void:triples "207"^^xsd:long;
+  void:distinctSubjects "207"^^xsd:long;
+  void:distinctObjects "93"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!49952aac!manuscriptHasShelfmark>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasShelfmark>;
+  void:triples "244"^^xsd:long;
+  void:distinctSubjects "244"^^xsd:long;
+  void:distinctObjects "232"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ed9a3d31!manuscriptHasTitle>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptHasTitle>;
+  void:triples "244"^^xsd:long;
+  void:distinctSubjects "244"^^xsd:long;
+  void:distinctObjects "193"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!bac8344d!manuscriptIsInArchive>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#manuscriptIsInArchive>;
+  void:triples "244"^^xsd:long;
+  void:distinctSubjects "244"^^xsd:long;
+  void:distinctObjects "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8426d7b3!msIsRewrittenInMsPart>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msIsRewrittenInMsPart>;
+  void:triples "3"^^xsd:long;
+  void:distinctSubjects "2"^^xsd:long;
+  void:distinctObjects "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!02559317!msPartHasNumber>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartHasNumber>;
+  void:triples "237"^^xsd:long;
+  void:distinctSubjects "237"^^xsd:long;
+  void:distinctObjects "49"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!f827a764!msPartHasTitle>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartHasTitle>;
+  void:triples "237"^^xsd:long;
+  void:distinctSubjects "237"^^xsd:long;
+  void:distinctObjects "213"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8328c2d0!msPartIsPartOf>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#msPartIsPartOf>;
+  void:triples "237"^^xsd:long;
+  void:distinctSubjects "237"^^xsd:long;
+  void:distinctObjects "42"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!cfa3b82b!periodicalHasTitle>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#periodicalHasTitle>;
+  void:triples "37"^^xsd:long;
+  void:distinctSubjects "37"^^xsd:long;
+  void:distinctObjects "37"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!48a4b68c!pubPartHasNumber>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#pubPartHasNumber>;
+  void:triples "95"^^xsd:long;
+  void:distinctSubjects "95"^^xsd:long;
+  void:distinctObjects "38"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!decdf9b7!pubPartHasTitle>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#pubPartHasTitle>;
+  void:triples "95"^^xsd:long;
+  void:distinctSubjects "95"^^xsd:long;
+  void:distinctObjects "83"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!6cca4972!publicationHasDate>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasDate>;
+  void:triples "126"^^xsd:long;
+  void:distinctSubjects "124"^^xsd:long;
+  void:distinctObjects "118"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!480602b9!publicationHasIllustration>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasIllustration>;
+  void:triples "3"^^xsd:long;
+  void:distinctSubjects "3"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!1b3fc5af!publicationHasPhoto>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasPhoto>;
+  void:triples "14"^^xsd:long;
+  void:distinctSubjects "14"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!ca4668c7!publicationHasTitle>
+  void:property <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#publicationHasTitle>;
+  void:triples "124"^^xsd:long;
+  void:distinctSubjects "124"^^xsd:long;
+  void:distinctObjects "108"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!952df7d3!hasGeneticStage>
+  void:property <https://w3id.org/geno#hasGeneticStage>;
+  void:triples "171"^^xsd:long;
+  void:distinctSubjects "171"^^xsd:long;
+  void:distinctObjects "7"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!7f44cfae!isBefore>
+  void:property <https://w3id.org/geno#isBefore>;
+  void:triples "48"^^xsd:long;
+  void:distinctSubjects "48"^^xsd:long;
+  void:distinctObjects "44"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!8410fd87!isMemberOfDossier>
+  void:property <https://w3id.org/geno#isMemberOfDossier>;
+  void:triples "449"^^xsd:long;
+  void:distinctSubjects "393"^^xsd:long;
+  void:distinctObjects "95"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!fc24c9be!isPartOfPublication>
+  void:property <https://w3id.org/geno#isPartOfPublication>;
+  void:triples "95"^^xsd:long;
+  void:distinctSubjects "95"^^xsd:long;
+  void:distinctObjects "10"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!85b7f6a8!publicationIsReusedInDossier>
+  void:property <https://w3id.org/geno#publicationIsReusedInDossier>;
+  void:triples "135"^^xsd:long;
+  void:distinctSubjects "101"^^xsd:long;
+  void:distinctObjects "101"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!3b76bf31!publicationPartIsReusedInDossier>
+  void:property <https://w3id.org/geno#publicationPartIsReusedInDossier>;
+  void:triples "22"^^xsd:long;
+  void:distinctSubjects "19"^^xsd:long;
+  void:distinctObjects "18"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!59149229!resultsInPublication>
+  void:property <https://w3id.org/geno#resultsInPublication>;
+  void:triples "81"^^xsd:long;
+  void:distinctSubjects "81"^^xsd:long;
+  void:distinctObjects "81"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_data-Roud!032ea7a8!resultsInPublicationPart>
+  void:property <https://w3id.org/geno#resultsInPublicationPart>;
+  void:triples "94"^^xsd:long;
+  void:distinctSubjects "94"^^xsd:long;
+  void:distinctObjects "94"^^xsd:long .
+
+<http://localhost:7200/repositories/geno#sparql-default-dataset> :namedGraph <https://w3id.org/geno#>,
+    <http://example.com/geno_examples>, <http://example.com/geno_prefixes> .
+
+<https://w3id.org/geno#> a :NamedGraph;
+  :name <https://w3id.org/geno#>;
+  :graph <http://localhost:7200/repositories/geno/.well-known/void#_graph_!03e49b5b>;
+  void:subset <http://localhost:7200/repositories/geno/.well-known/void#linkset_ad47be16>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_14822aa5>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_2b781003>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_995dc004>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_dac08398>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_b1302a47>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_831f68fe>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_8cca9c60>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_286d167f>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_9ae7e419>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_1704e80f>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_edabd207>, <http://localhost:7200/repositories/geno/.well-known/void#linkset_01d29427>,
+    <http://localhost:7200/repositories/geno/.well-known/void#linkset_ac29494f> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#_graph_!03e49b5b> a :Graph;
+  void:triples "383"^^xsd:long;
+  void:classes "6"^^xsd:long;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!bb70ba4a!NamedIndividual>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!89df24df!Ontology>, <http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!431ec99f!GeneticStage>;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#!5e23481d!contributor>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!d8448f7d!creator>, <http://localhost:7200/repositories/geno/.well-known/void#!faeeb644!date>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!38e1536b!description>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!cfac1f9e!rights>, <http://localhost:7200/repositories/geno/.well-known/void#!10a2b68e!title>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!3536baaa!first>, <http://localhost:7200/repositories/geno/.well-known/void#!6a744d33!rest>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!c74e2b73!type>, <http://localhost:7200/repositories/geno/.well-known/void#!dacf627f!comment>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!d89567f0!domain>, <http://localhost:7200/repositories/geno/.well-known/void#!4f75ce12!label>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!578d0880!range>, <http://localhost:7200/repositories/geno/.well-known/void#!b6c99360!subClassOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!b60d90ef!subPropertyOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!63c77f73!subclassOf>, <http://localhost:7200/repositories/geno/.well-known/void#!863e2c9c!disjointWith>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!bbfcc21a!equivalentClass>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!5a36ccee!hasValue>, <http://localhost:7200/repositories/geno/.well-known/void#!f48ccabe!imports>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!5bba4b7c!intersectionOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!45a800b1!inverseOf>, <http://localhost:7200/repositories/geno/.well-known/void#!7841e8d0!minQualifiedCardinality>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!26363953!onClass>, <http://localhost:7200/repositories/geno/.well-known/void#!07fd2e02!onProperty>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!ef6657b0!priorVersion>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!0b7059f5!qualifiedCardinality>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!6d4c6c11!unionOf>, <http://localhost:7200/repositories/geno/.well-known/void#!31c867da!versionIRI>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!2285a2da!versionInfo>;
+  void:distinctObjects "69"^^xsd:long;
+  void_ext:distinctLiterals "69"^^xsd:long;
+  void:distinctSubjects "53"^^xsd:long;
+  void_ext:distinctBlankNodeSubjects "53"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:entities "30"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#!94b0b7a4!-Class-comment>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!0ebad68b!-Class-label>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!dbcf9800!-Class-subClassOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!7b987826!-Class-subclassOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!daf44f44!-Class-disjointWith>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!af903d0d!-Class-equivalentClass>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!b25cdeab!-Class-intersectionOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!2d7d9409!-Class-unionOf> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!94b0b7a4!-Class-comment>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#comment>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!654a1728!-comment-string>;
+  void:triples "18"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!654a1728!-comment-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!0ebad68b!-Class-label>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#label>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!d32f4712!-label-string>;
+  void:triples "18"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!d32f4712!-label-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!dbcf9800!-Class-subClassOf>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#subClassOf>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!edb14cf5!-Class-subClassOf-Class>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!200355f7!-Class-subClassOf-Restriction>;
+  void:triples "16"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!edb14cf5!-Class-subClassOf-Class>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:triples "14"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!200355f7!-Class-subClassOf-Restriction>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Restriction>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_ad47be16> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2000/01/rdf-schema#subClassOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_14822aa5> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2000/01/rdf-schema#subClassOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!7b987826!-Class-subclassOf>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#subclassOf>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!6c061b02!-Class-subclassOf-Class>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!6556d235!-Class-subclassOf-Restriction>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!6c061b02!-Class-subclassOf-Class>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!6556d235!-Class-subclassOf-Restriction>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Restriction>;
+  void:triples "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_2b781003> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2000/01/rdf-schema#subclassOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_995dc004> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2000/01/rdf-schema#subclassOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!daf44f44!-Class-disjointWith>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#disjointWith>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!2a7e29ad!-Class-disjointWith-Class>;
+  void:triples "83"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!2a7e29ad!-Class-disjointWith-Class>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:triples "83"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_dac08398> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2002/07/owl#disjointWith>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!af903d0d!-Class-equivalentClass>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#equivalentClass>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!fa80c7ba!-Class-equivalentClass-Class>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!fa80c7ba!-Class-equivalentClass-Class>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_b1302a47> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2002/07/owl#equivalentClass>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!b25cdeab!-Class-intersectionOf>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#intersectionOf>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!2d7d9409!-Class-unionOf>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#unionOf>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!bb70ba4a!NamedIndividual>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#NamedIndividual>;
+  void:entities "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  void:entities "12"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#!118b2bba!-ObjectProperty-comment>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!4ec02c08!-ObjectProperty-domain>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!3317d145!-ObjectProperty-label>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!1d8f9d15!-ObjectProperty-range>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!217f5c2b!-ObjectProperty-subPropertyOf>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!64fafd54!-ObjectProperty-inverseOf> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!118b2bba!-ObjectProperty-comment>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#comment>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!654a1728!-comment-string>;
+  void:triples "12"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!4ec02c08!-ObjectProperty-domain>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#domain>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!430d9187!-ObjectProperty-domain-Class>;
+  void:triples "11"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!430d9187!-ObjectProperty-domain-Class>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:triples "11"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_831f68fe> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2000/01/rdf-schema#domain>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!3317d145!-ObjectProperty-label>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#label>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!d32f4712!-label-string>;
+  void:triples "12"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!1d8f9d15!-ObjectProperty-range>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#range>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!378f09ef!-ObjectProperty-range-Class>;
+  void:triples "12"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!378f09ef!-ObjectProperty-range-Class>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:triples "12"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_8cca9c60> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2000/01/rdf-schema#range>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!217f5c2b!-ObjectProperty-subPropertyOf>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!175a2819!-ObjectProperty-subPropertyOf-ObjectProperty>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!175a2819!-ObjectProperty-subPropertyOf-ObjectProperty>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  void:triples "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_286d167f> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!64fafd54!-ObjectProperty-inverseOf>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#inverseOf>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!6ed09628!-ObjectProperty-inverseOf-ObjectProperty>;
+  void:triples "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!6ed09628!-ObjectProperty-inverseOf-ObjectProperty>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  void:triples "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_9ae7e419> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2002/07/owl#inverseOf>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!89df24df!Ontology> a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Ontology>;
+  void:entities "1"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#!9947ec96!-Ontology-contributor>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!bf4edce4!-Ontology-creator>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!d726e8db!-Ontology-date>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!77d16561!-Ontology-description>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!cd7e91e8!-Ontology-rights>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!e3584796!-Ontology-title>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!205824a0!-Ontology-comment>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!aaf63311!-Ontology-imports>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!d5e71073!-Ontology-priorVersion>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!3c9eae7f!-Ontology-versionIRI>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!e48b7ff1!-Ontology-versionInfo> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!9947ec96!-Ontology-contributor>
+  a void:Dataset;
+  void:property <http://purl.org/dc/elements/1.1/contributor>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!760187bc!-contributor-string>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!760187bc!-contributor-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!bf4edce4!-Ontology-creator>
+  a void:Dataset;
+  void:property <http://purl.org/dc/elements/1.1/creator>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!3d8de494!-creator-string>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!3d8de494!-creator-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!d726e8db!-Ontology-date>
+  a void:Dataset;
+  void:property <http://purl.org/dc/elements/1.1/date>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!3d2ecb55!-date-string>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!3d2ecb55!-date-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!77d16561!-Ontology-description>
+  a void:Dataset;
+  void:property <http://purl.org/dc/elements/1.1/description>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!d41c95ff!-description-string>;
+  void:triples "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!d41c95ff!-description-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!cd7e91e8!-Ontology-rights>
+  a void:Dataset;
+  void:property <http://purl.org/dc/elements/1.1/rights>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!e4fd210e!-rights-string>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!e4fd210e!-rights-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!e3584796!-Ontology-title>
+  a void:Dataset;
+  void:property <http://purl.org/dc/elements/1.1/title>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!89917f2c!-title-string>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!89917f2c!-title-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!205824a0!-Ontology-comment>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#comment>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!654a1728!-comment-string>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!aaf63311!-Ontology-imports>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#imports>;
+  void:triples "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!d5e71073!-Ontology-priorVersion>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#priorVersion>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!3c9eae7f!-Ontology-versionIRI>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#versionIRI>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!e48b7ff1!-Ontology-versionInfo>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#versionInfo>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!e16ea4ab!-versionInfo-string>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!e16ea4ab!-versionInfo-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction> a
+    void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Restriction>;
+  void:entities "14"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#!2ea63d77!-Restriction-hasValue>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!224fbe09!-Restriction-minQualifiedCardinality>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!1ea64d4d!-Restriction-onClass>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!4f8c188d!-Restriction-onProperty>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!4b11a607!-Restriction-qualifiedCardinality> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!2ea63d77!-Restriction-hasValue>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#hasValue>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!69d93f3b!-Restriction-hasValue-NamedIndividual>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!64b65c2a!-Restriction-hasValue-GeneticStage>;
+  void_ext:objectPartition <http://localhost:7200/repositories/geno/.well-known/void#!7ef2ef5e!-hasValue-ClearCopy>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!7ca283e9!-hasValue-Draft>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!1b07fe16!-hasValue-FinalCopy>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!d094f00e!-hasValue-List>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!036ff21d!-hasValue-Plan>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!210f7a53!-hasValue-Proofs>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!42f10779!-hasValue-PublishedItem>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!a3d5656f!-hasValue-Scenario>,
+    <http://localhost:7200/repositories/geno/.well-known/void#!e7969cab!-hasValue-Sketch>;
+  void:triples "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!69d93f3b!-Restriction-hasValue-NamedIndividual>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#NamedIndividual>;
+  void:triples "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!64b65c2a!-Restriction-hasValue-GeneticStage>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticStage>;
+  void:triples "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!7ef2ef5e!-hasValue-ClearCopy>
+  void_ext:object <https://w3id.org/geno#ClearCopy>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!7ca283e9!-hasValue-Draft>
+  void_ext:object <https://w3id.org/geno#Draft>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!1b07fe16!-hasValue-FinalCopy>
+  void_ext:object <https://w3id.org/geno#FinalCopy>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!d094f00e!-hasValue-List>
+  void_ext:object <https://w3id.org/geno#List>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!036ff21d!-hasValue-Plan>
+  void_ext:object <https://w3id.org/geno#Plan>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!210f7a53!-hasValue-Proofs>
+  void_ext:object <https://w3id.org/geno#Proofs>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!42f10779!-hasValue-PublishedItem>
+  void_ext:object <https://w3id.org/geno#PublishedItem>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!a3d5656f!-hasValue-Scenario>
+  void_ext:object <https://w3id.org/geno#Scenario>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!e7969cab!-hasValue-Sketch>
+  void_ext:object <https://w3id.org/geno#Sketch>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_1704e80f> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2002/07/owl#hasValue>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!bb70ba4a!NamedIndividual> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_edabd207> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2002/07/owl#hasValue>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!431ec99f!GeneticStage> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!224fbe09!-Restriction-minQualifiedCardinality>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#minQualifiedCardinality>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!ff1fa82c!-minQualifiedCardinality-nonNegativeInteger>;
+  void:triples "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!ff1fa82c!-minQualifiedCardinality-nonNegativeInteger>
+  a void:Dataset;
+  void_ext:datatype xsd:nonNegativeInteger .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!1ea64d4d!-Restriction-onClass>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#onClass>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!94c439f9!-Restriction-onClass-Class>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!94c439f9!-Restriction-onClass-Class>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#Class>;
+  void:triples "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_01d29427> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2002/07/owl#onClass>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!6be100d0!Class> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!4f8c188d!-Restriction-onProperty>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#onProperty>;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#!38f36c83!-Restriction-onProperty-ObjectProperty>;
+  void:triples "14"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!38f36c83!-Restriction-onProperty-ObjectProperty>
+  a void:Dataset;
+  void:class <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  void:triples "14"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#linkset_ac29494f> a void:Linkset;
+  void:linkPredicate <http://www.w3.org/2002/07/owl#onProperty>;
+  void:subjectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!9ed2fb7d!Restriction>;
+  void:objectsTarget <http://localhost:7200/repositories/geno/.well-known/void#!472ee8b9!ObjectProperty> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!4b11a607!-Restriction-qualifiedCardinality>
+  a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#qualifiedCardinality>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#!4b20aa69!-qualifiedCardinality-nonNegativeInteger>;
+  void:triples "4"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!4b20aa69!-qualifiedCardinality-nonNegativeInteger>
+  a void:Dataset;
+  void_ext:datatype xsd:nonNegativeInteger .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!431ec99f!GeneticStage>
+  a void:Dataset;
+  void:class <https://w3id.org/geno#GeneticStage>;
+  void:entities "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!5e23481d!contributor> void:property
+    <http://purl.org/dc/elements/1.1/contributor>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!d8448f7d!creator> void:property
+    <http://purl.org/dc/elements/1.1/creator>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!faeeb644!date> void:property
+    <http://purl.org/dc/elements/1.1/date>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!38e1536b!description> void:property
+    <http://purl.org/dc/elements/1.1/description>;
+  void:triples "2"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!cfac1f9e!rights> void:property
+    <http://purl.org/dc/elements/1.1/rights>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!10a2b68e!title> void:property
+    <http://purl.org/dc/elements/1.1/title>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!3536baaa!first> void:property
+    rdf:first;
+  void:triples "27"^^xsd:long;
+  void:distinctSubjects "27"^^xsd:long;
+  void:distinctObjects "22"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!6a744d33!rest> void:property
+    rdf:rest;
+  void:triples "27"^^xsd:long;
+  void:distinctSubjects "27"^^xsd:long;
+  void:distinctObjects "16"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!c74e2b73!type> void:property
+    rdf:type;
+  void:triples "75"^^xsd:long;
+  void:distinctSubjects "66"^^xsd:long;
+  void:distinctObjects "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!dacf627f!comment> void:property
+    <http://www.w3.org/2000/01/rdf-schema#comment>;
+  void:triples "31"^^xsd:long;
+  void:distinctSubjects "31"^^xsd:long;
+  void:distinctObjects "31"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!d89567f0!domain> void:property
+    <http://www.w3.org/2000/01/rdf-schema#domain>;
+  void:triples "11"^^xsd:long;
+  void:distinctSubjects "11"^^xsd:long;
+  void:distinctObjects "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!4f75ce12!label> void:property
+    <http://www.w3.org/2000/01/rdf-schema#label>;
+  void:triples "30"^^xsd:long;
+  void:distinctSubjects "30"^^xsd:long;
+  void:distinctObjects "30"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!578d0880!range> void:property
+    <http://www.w3.org/2000/01/rdf-schema#range>;
+  void:triples "12"^^xsd:long;
+  void:distinctSubjects "12"^^xsd:long;
+  void:distinctObjects "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!b6c99360!subClassOf> void:property
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf>;
+  void:triples "16"^^xsd:long;
+  void:distinctSubjects "10"^^xsd:long;
+  void:distinctObjects "7"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!b60d90ef!subPropertyOf>
+  void:property <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>;
+  void:triples "3"^^xsd:long;
+  void:distinctSubjects "3"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!63c77f73!subclassOf> void:property
+    <http://www.w3.org/2000/01/rdf-schema#subclassOf>;
+  void:triples "3"^^xsd:long;
+  void:distinctSubjects "2"^^xsd:long;
+  void:distinctObjects "3"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!863e2c9c!disjointWith>
+  void:property <http://www.w3.org/2002/07/owl#disjointWith>;
+  void:triples "83"^^xsd:long;
+  void:distinctSubjects "15"^^xsd:long;
+  void:distinctObjects "13"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!bbfcc21a!equivalentClass>
+  void:property <http://www.w3.org/2002/07/owl#equivalentClass>;
+  void:triples "6"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!5a36ccee!hasValue> void:property
+    <http://www.w3.org/2002/07/owl#hasValue>;
+  void:triples "9"^^xsd:long;
+  void:distinctSubjects "9"^^xsd:long;
+  void:distinctObjects "9"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!f48ccabe!imports> void:property
+    <http://www.w3.org/2002/07/owl#imports>;
+  void:triples "2"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!5bba4b7c!intersectionOf>
+  void:property <http://www.w3.org/2002/07/owl#intersectionOf>;
+  void:triples "6"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!45a800b1!inverseOf> void:property
+    <http://www.w3.org/2002/07/owl#inverseOf>;
+  void:triples "2"^^xsd:long;
+  void:distinctSubjects "2"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!7841e8d0!minQualifiedCardinality>
+  void:property <http://www.w3.org/2002/07/owl#minQualifiedCardinality>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!26363953!onClass> void:property
+    <http://www.w3.org/2002/07/owl#onClass>;
+  void:triples "5"^^xsd:long;
+  void:distinctSubjects "5"^^xsd:long;
+  void:distinctObjects "4"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!07fd2e02!onProperty> void:property
+    <http://www.w3.org/2002/07/owl#onProperty>;
+  void:triples "14"^^xsd:long;
+  void:distinctSubjects "14"^^xsd:long;
+  void:distinctObjects "5"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!ef6657b0!priorVersion>
+  void:property <http://www.w3.org/2002/07/owl#priorVersion>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!0b7059f5!qualifiedCardinality>
+  void:property <http://www.w3.org/2002/07/owl#qualifiedCardinality>;
+  void:triples "4"^^xsd:long;
+  void:distinctSubjects "4"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!6d4c6c11!unionOf> void:property
+    <http://www.w3.org/2002/07/owl#unionOf>;
+  void:triples "6"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!31c867da!versionIRI> void:property
+    <http://www.w3.org/2002/07/owl#versionIRI>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#!2285a2da!versionInfo> void:property
+    <http://www.w3.org/2002/07/owl#versionInfo>;
+  void:triples "1"^^xsd:long;
+  void:distinctSubjects "1"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://example.com/geno_examples> a :NamedGraph;
+  :name <http://example.com/geno_examples>;
+  :graph <http://localhost:7200/repositories/geno/.well-known/void#_graph_geno_examples!c1aabf19> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#_graph_geno_examples!c1aabf19>
+  a :Graph;
+  void:triples "43"^^xsd:long;
+  void:classes "2"^^xsd:long;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!ccf949e9!SPARQLExecutable>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!d913cb6c!SPARQLSelectExecutable>;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!c74e2b73!type>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!dacf627f!comment>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!93530924!prefixes>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!63833064!select>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!a00dbf89!keywords>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!8ce79043!target>;
+  void:distinctObjects "19"^^xsd:long;
+  void_ext:distinctLiterals "19"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!ccf949e9!SPARQLExecutable>
+  a void:Dataset;
+  void:class <http://www.w3.org/ns/shacl#SPARQLExecutable>;
+  void:entities "6"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!edab065b!-SPARQLExecutable-comment>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!2b509893!-SPARQLExecutable-prefixes>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!ff05eaad!-SPARQLExecutable-select>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!85f942cf!-SPARQLExecutable-keywords>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!8cc5cb3e!-SPARQLExecutable-target> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!edab065b!-SPARQLExecutable-comment>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#comment>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!f3d9da63!-comment-langString>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!f3d9da63!-comment-langString>
+  a void:Dataset;
+  void_ext:datatype rdf:langString .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!2b509893!-SPARQLExecutable-prefixes>
+  a void:Dataset;
+  void:property <http://www.w3.org/ns/shacl#prefixes>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!ff05eaad!-SPARQLExecutable-select>
+  a void:Dataset;
+  void:property <http://www.w3.org/ns/shacl#select>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!2362b444!-select-string>;
+  void:triples "7"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!2362b444!-select-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!85f942cf!-SPARQLExecutable-keywords>
+  a void:Dataset;
+  void:property <https://schema.org/keywords>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!d1ee7351!-keywords-string>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!d1ee7351!-keywords-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!8cc5cb3e!-SPARQLExecutable-target>
+  a void:Dataset;
+  void:property <https://schema.org/target>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!d913cb6c!SPARQLSelectExecutable>
+  a void:Dataset;
+  void:class <http://www.w3.org/ns/shacl#SPARQLSelectExecutable>;
+  void:entities "6"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!6d5419a8!-SPARQLSelectExecutable-comment>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!62f035f6!-SPARQLSelectExecutable-prefixes>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!95c6df61!-SPARQLSelectExecutable-select>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!f97fc447!-SPARQLSelectExecutable-keywords>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!6a27befc!-SPARQLSelectExecutable-target> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!6d5419a8!-SPARQLSelectExecutable-comment>
+  a void:Dataset;
+  void:property <http://www.w3.org/2000/01/rdf-schema#comment>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!f3d9da63!-comment-langString>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!62f035f6!-SPARQLSelectExecutable-prefixes>
+  a void:Dataset;
+  void:property <http://www.w3.org/ns/shacl#prefixes>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!95c6df61!-SPARQLSelectExecutable-select>
+  a void:Dataset;
+  void:property <http://www.w3.org/ns/shacl#select>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!2362b444!-select-string>;
+  void:triples "7"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!f97fc447!-SPARQLSelectExecutable-keywords>
+  a void:Dataset;
+  void:property <https://schema.org/keywords>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_examples!d1ee7351!-keywords-string>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!6a27befc!-SPARQLSelectExecutable-target>
+  a void:Dataset;
+  void:property <https://schema.org/target>;
+  void:triples "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!c74e2b73!type>
+  void:property rdf:type;
+  void:triples "12"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!dacf627f!comment>
+  void:property <http://www.w3.org/2000/01/rdf-schema#comment>;
+  void:triples "6"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!93530924!prefixes>
+  void:property <http://www.w3.org/ns/shacl#prefixes>;
+  void:triples "6"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!63833064!select>
+  void:property <http://www.w3.org/ns/shacl#select>;
+  void:triples "7"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "7"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!a00dbf89!keywords>
+  void:property <https://schema.org/keywords>;
+  void:triples "6"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "6"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_examples!8ce79043!target>
+  void:property <https://schema.org/target>;
+  void:triples "6"^^xsd:long;
+  void:distinctSubjects "6"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://example.com/geno_prefixes> a :NamedGraph;
+  :name <http://example.com/geno_prefixes>;
+  :graph <http://localhost:7200/repositories/geno/.well-known/void#_graph_geno_prefixes!44b58094> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#_graph_geno_prefixes!44b58094>
+  a :Graph;
+  void:triples "24"^^xsd:long;
+  void:classes "1"^^xsd:long;
+  void:classPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!856e8a36!PrefixMapping>;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!c74e2b73!type>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!0490d602!namespace>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!0cc8421a!prefix>;
+  void:distinctObjects "8"^^xsd:long;
+  void_ext:distinctLiterals "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!856e8a36!PrefixMapping>
+  a void:Dataset;
+  void:class <http://www.w3.org/ns/shacl#PrefixMapping>;
+  void:entities "8"^^xsd:long;
+  void:propertyPartition <http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!58a4e276!-PrefixMapping-namespace>,
+    <http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!a32d2590!-PrefixMapping-prefix> .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!58a4e276!-PrefixMapping-namespace>
+  a void:Dataset;
+  void:property <http://www.w3.org/ns/shacl#namespace>;
+  void:triples "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!a32d2590!-PrefixMapping-prefix>
+  a void:Dataset;
+  void:property <http://www.w3.org/ns/shacl#prefix>;
+  void_ext:datatypePartition <http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!825d92ad!-prefix-string>;
+  void:triples "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!825d92ad!-prefix-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!c74e2b73!type>
+  void:property rdf:type;
+  void:triples "8"^^xsd:long;
+  void:distinctSubjects "8"^^xsd:long;
+  void:distinctObjects "1"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!0490d602!namespace>
+  void:property <http://www.w3.org/ns/shacl#namespace>;
+  void:triples "8"^^xsd:long;
+  void:distinctSubjects "8"^^xsd:long;
+  void:distinctObjects "8"^^xsd:long .
+
+<http://localhost:7200/repositories/geno/.well-known/void#geno_prefixes!0cc8421a!prefix>
+  void:property <http://www.w3.org/ns/shacl#prefix>;
+  void:triples "8"^^xsd:long;
+  void:distinctSubjects "8"^^xsd:long;
+  void:distinctObjects "8"^^xsd:long .
